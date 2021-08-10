@@ -1,1 +1,29 @@
+###I/O###
+SYSTEM =Ti3Al Cell opt
+ISTART =  1            (Read existing wavefunction; if there)
+ICHARG =  1            (Non-self-consistent: GGA/LDA band structures)
+LREAL  = .FALSE.       (Projection operators: automatic)
+LWAVE  = .TRUE.        (Write WAVECAR or not)
+LCHARG = .TRUE.        (Write CHGCAR or not)
+LVTOT  = .FALSE.      (Write total electrostatic potential into LOCPOT or not)
+LVHAR  = .FALSE.      (Write ionic + Hartree electrostatic potential into LOCPOT or not)
+LELF   = .FALSE.
+LORBIT = 11
 
+##SCF Electronic Relaxation##
+ENCUT  =400
+ISMEAR = 0
+SIGMA  = 0.05
+EDIFF  = 1E-7
+NELMIN = 5
+NELM   = 300
+GGA    =PE
+
+##Geo opt Ionic Relaxation##
+EDIFFG = -0.01       (Ionic convergence; eV/AA)
+IBRION =  2            (Algorithm: 0-MD; 1-Quasi-New; 2-CG)
+POTIM  =  0.2
+NSW    =  300          (Max ionic steps)
+ISIF   =  3            (Stress/relaxation: 2-Ions, 3-Shape/Ions/V, 4-Shape/Ions)
+
+ 

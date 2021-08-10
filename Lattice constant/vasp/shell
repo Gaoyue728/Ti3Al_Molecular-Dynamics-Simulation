@@ -1,0 +1,7 @@
+for i in $(seq  0.7  0.02  2.00)
+do 
+   cp  -r  scf  $i
+   cd  $i
+     sed  -i  '2s/1/'$i'/g'  POSCAR
+	cd ../
+done

@@ -1,1 +1,30 @@
-
+Global Parameters
+ISTART =  1            (Read existing wavefunction; if there)
+# ISPIN =  2           (Spin polarised DFT)
+# ICHARG =  11         (Non-self-consistent: GGA/LDA band structures)
+LREAL  = .FALSE.       (Projection operators: automatic)
+# ENCUT  =  400        (Cut-off energy for plane wave basis set, in eV)
+PREC   =  Normal       (Precision level)
+LWAVE  = .TRUE.        (Write WAVECAR or not)
+LCHARG = .TRUE.        (Write CHGCAR or not)
+ADDGRID= .TRUE.        (Increase grid; helps GGA convergence)
+# LVTOT  = .TRUE.      (Write total electrostatic potential into LOCPOT or not)
+# LVHAR  = .TRUE.      (Write ionic + Hartree electrostatic potential into LOCPOT or not)
+# NELECT =             (No. of electrons: charged cells; be careful)
+# LPLANE = .TRUE.      (Real space distribution; supercells)
+# NPAR   = 4           (Max is no. nodes; don't set for hybrids)
+# NWRITE = 2           (Medium-level output)
+# KPAR   = 2           (Divides k-grid into separate groups)
+# NGX    = 500         (FFT grid mesh density for nice charge/potential plots)
+# NGY    = 500         (FFT grid mesh density for nice charge/potential plots)
+# NGZ    = 500         (FFT grid mesh density for nice charge/potential plots)
+ 
+Elastic constants Calculation
+# NGZ    = 500         (FFT grid mesh density for nice charge/potential plots)
+IBRION    =  6         (Determine the Hessian matrix)
+NFREE     =  4        (How many displacements are used for each direction; 2-4)
+ISIF      =  3         (Stress/relaxation: 3-Shape/Ions/V)
+NSW       =  1         (Max ionic steps)
+PREC      =  High      (High level)
+! ENCUT   =  400       (1.3 ~ 1.5 * default cutoff, need to check convergence)
+ 
